@@ -22,10 +22,10 @@
             cargo-binutils
             qemu
             pkg-config
-            (rust-bin.selectLatestNightlyWith (toolchain: toolchain.default.override {
+            (rust-bin.nightly."2022-08-05".default.override {
                 extensions = [ "rust-src" "llvm-tools-preview" ];
                 targets = [ "riscv64gc-unknown-none-elf" ];
-              }))
+            })
           ];
 
         };
